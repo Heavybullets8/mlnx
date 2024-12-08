@@ -14,4 +14,4 @@ RUN apt-get update
 
 RUN apt-get install -y doca-all-userspace && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["/bin/bash"]
