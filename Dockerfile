@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
-    wget curl gnupg2 ca-certificates \
+    wget curl gnupg2 ca-certificates mstflint pciutils ethtool \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN export DOCA_URL="https://linux.mellanox.com/public/repo/doca/2.9.0/ubuntu24.04/x86_64/" && \
